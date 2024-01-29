@@ -1,0 +1,17 @@
+<div>
+    <div class="entry-list-header">
+        <app-create-button></app-create-button>
+        <!--Если пользователь авторизован отображается его email, если не авторизован, то надпись "Войти"-->
+        <div class="entry-list-login" *ngIf="userEmail">{{ userEmail }}</div>
+        <a routerLink="/authorization" class="entry-list-login" *ngIf="!userEmail">Войти</a>
+    </div>
+    <div *ngIf="entries">
+        <app-diary-entry *ngFor="let entry of entries"
+            [entry]="entry"
+        ></app-diary-entry>
+    </div>
+    <!--Если в local storage нет ни одной записи, пользователь видит данную надпись и может создать ее с помощью кнопки-->
+    <div class ="entry-list-text" *ngIf="entries.length === 0">
+        У вас пока нет ни одной записи. Создайте запись с помощью кнопки «Создать запись»
+    </div>
+</div>

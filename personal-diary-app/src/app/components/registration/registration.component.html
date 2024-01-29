@@ -1,0 +1,22 @@
+<form class="auth-form" [formGroup]="form" (ngSubmit)="registration()">
+    <div class="auth-title">Регистрация</div>
+    <!--Если пользователь нажмет на поле и не заполнит его появится сообщение о том, что поле обязательное-->
+    <div>
+        <input class="auth-input" placeholder="Введите email" formControlName="email"/>
+        <div class="auth-error" *ngIf="email.errors && email.touched">Это поле является обязательным</div>
+    </div>
+    <div>
+        <input class="auth-input" type="password" placeholder="Введите пароль" formControlName="password"/>
+        <div class="auth-error" *ngIf="password.errors && password.touched">Это поле является обязательным</div>
+    </div>
+    <!--Если с сервера пришла ошибка при регистрации отображаем ее-->
+    <div class="auth-error" *ngIf="authService.authError$ | async as error">
+        {{ error }}
+    </div>
+    <!--Пока пользователь не заполнит обязательные поля (email и пароль) кнопка для отправки запроса на регистрацию недоступна-->
+    <button type="submit" [disabled]="email.errors || password.errors">Зарегистрироваться</button>
+    <div>
+        У вас уже есть аккаунт? 
+        <a routerLink="/authorization">Войти</a>
+    </div>
+</form>

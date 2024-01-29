@@ -1,0 +1,48 @@
+.entry-сontainer {
+    margin: 30px 0px 30px 0px;
+    padding: 40px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #888888;
+}
+
+.entry-header {
+    display: grid;
+    grid-template-columns: 75% 25%;
+}
+
+.entry-icon {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px; 
+}
+
+.entry-icon svg {
+    width: 20px;
+    height: 20px;
+    color: black;
+    cursor: pointer;
+}
+
+.entry-wrap {
+    margin: 10px 0px 10px 0px;
+    display: grid;
+    grid-template-columns: 75% 25%;
+}
+
+.entry-text {
+    padding: 20px;
+    font-size: 22px;
+}
+
+.entry-image {
+    margin: auto; 
+    padding: 20px;
+    height: 150px;
+    width: 150px;
+    border-radius: 35px;
+    object-fit: cover;
+}
+
+

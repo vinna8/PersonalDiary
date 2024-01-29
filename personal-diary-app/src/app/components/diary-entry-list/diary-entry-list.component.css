@@ -1,0 +1,16 @@
+.entry-list-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.entry-list-login {
+    margin-right: 15px;
+    font-size: 17px;
+}
+
+.entry-list-text {
+    margin-top: 15px;
+    font-size: 18px;
+}

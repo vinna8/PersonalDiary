@@ -1,0 +1,10 @@
+<div>
+    <!--При клике на кнопку появляется модальное окно с формой, заполнив которую можно создать новую запись-->
+    <button (click)="modalService.openModalWindow()">Создать запись</button>
+    <app-modal-window 
+        *ngIf="modalService.showModal$ | async"
+        modalTitle="Создать новую запись"
+    >
+        <app-create-entry></app-create-entry>
+    </app-modal-window>
+</div>  

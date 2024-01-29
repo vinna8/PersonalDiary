@@ -1,0 +1,65 @@
+.edit-сontainer {
+    padding: 40px;
+    width: 800px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto; 
+    gap: 15px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #888888;
+}
+
+.edit-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+    font-size: 20px;
+}
+
+.edit-icon {
+    width: 20px;
+    height: 20px;
+    color: #000000;
+}
+
+.edit-wrap {
+    display: grid;
+    grid-template-columns: 75% 25%;
+}
+
+.edit-text {
+    padding: 20px;
+    height: 200px;
+    width: 400px;
+    font-size: 16px;
+    border: 1px solid #000000;
+    resize: none;
+}
+
+.edit-image {
+    margin: auto; 
+    padding: 20px;
+    height: 150px;
+    width: 150px;
+    border-radius: 35px;
+    object-fit: cover;
+}
+
+.edit-error {
+    margin-top: 5px;
+    text-align: center;
+    color: rgb(238, 45, 45);
+    font-weight: 600;
+}
+
+button {
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid black;
+    border-radius: 15px;
+    cursor: pointer;
+}
