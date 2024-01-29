@@ -2,6 +2,8 @@
 Приложение реализовано с помощью Angular CLI.
 
 Запуск приложения:
+### `cd personal-diary-app`
+### `npm install`
 ### `ng serve -o`
 
 ## Функциональность: 
